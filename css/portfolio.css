@@ -1,3 +1,63 @@
+/* font-family: 'Playfair Display', serif;
+font-family: 'Poppins', sans-serif; */
+
+:root {
+  --branding-color: #6c63ff;
+  --secondary-color: #f9f7fe;
+  --heading-font-family: "Playfair Display", serif;
+  --default-font-family: "Poppins", sans-serif;
+}
+
+body {
+  font-family: var(--default-font-family);
+}
+
+h1 {
+  font-size: 96px;
+  line-height: 1.5;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: black;
+  font-family: var(--heading-font-family);
+  font-weight: bold;
+}
+
+p {
+  font-family: "Poppins", sans-serif;
+}
+
+nav {
+  padding: 20px;
+}
+
+nav li {
+  display: inline;
+  list-style: none;
+  line-height: 42px;
+  margin-left: 10px;
+}
+
+nav ul {
+  padding: 0;
+  margin: 0;
+}
+
+nav a {
+  color: black;
+}
+
+nav a:hover,
+nav li.active a {
+  color: var(--branding-color);
+  text-decoration: none;
+}
+
 .hero {
   background: var(--secondary-color);
   text-align: center;
@@ -14,7 +74,7 @@
 .hero h2 {
   font-family: var(--default-font-family);
   font-weight: normal;
-  line-height: 2;
+  line-height: 1;
   font-size: 24px;
 }
 
@@ -75,8 +135,9 @@
 
 @media (max-width: 900px) {
   h1 {
-    font-size: 44px;
-    line-height: 2;
+    font-size: 60px;
+    line-height: 56px;
+    margin-bottom: 20px;
   }
 
   h2 {
@@ -87,8 +148,20 @@
     padding: 80px 20px;
   }
 
+  .hero h2 {
+    font-size: 24px;
+  }
+
   .content-container {
     text-align: center;
     padding: 0;
+  }
+
+  nav a {
+    font-size: 0.8rem;
+  }
+
+  nav {
+    margin: 10px;
   }
 }
